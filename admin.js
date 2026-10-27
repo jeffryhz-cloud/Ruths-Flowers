@@ -1,7 +1,7 @@
 const N=window.NEGOCIO,$=s=>document.querySelector(s);
 if(!N.supabaseUrl){$("#login").innerHTML="<p class='err'>Falta configurar Supabase en config.js (ver README).</p>"}
 else{
-const sb=supabase.createClient(N.supabaseUrl,N.supabaseAnonKey);
+const sb=supabase.createClient(N.supabaseUrl,N.supabaseAnonKey);window.sbAdmin=sb;
 const ESTADOS=["nuevo","pendiente","en preparación","listo","entregado","cancelado"];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 async function entrar(){const{data}=await sb.auth.getSession();const ok=!!data.session;$("#login").hidden=ok;$("#panel").hidden=!ok;if(ok){cargar();sb.channel("p").on("postgres_changes",{event:"*",schema:"public",table:"pedidos"},cargar).subscribe()}}

@@ -9,6 +9,9 @@
  <p class="nota" id="notifMsg">Para recibir avisos con el celular bloqueado: en iPhone, primero agrega esta página a la pantalla de inicio; en Android usa Chrome. Pueden retrasarse si el ahorro de batería está activo.</p>
  <label>Mostrar<select id="filtro"><option value="">Todos</option><option>nuevo</option><option>pendiente</option><option>en preparación</option><option>listo</option><option>entregado</option><option>cancelado</option></select></label>
  <div id="lista"></div>
+</section><section id="extra" hidden>
+<h2>Productos</h2><button id="nuevoProd" class="btn">Agregar producto</button><div id="prods"></div>
+<h2>Datos del negocio</h2><form id="ajustes" style="display:grid;gap:10px"></form><p id="amsg" role="status"></p>
 </section></main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-<script src="config.js"></script><script src="admin.js"></script></body></html>
+<script src="config.js"></script><script src="admin.js"></script><script src="admin-extra.js"></script></body></html>

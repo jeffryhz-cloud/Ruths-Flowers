@@ -29,6 +29,8 @@ Faltan por completar: horarios, mapa y correo (opcionales).
 - Chrome en Android es lo más fiable. El ahorro de batería o restringir la app puede retrasar o bloquear avisos.
 - Si el cliente abre WhatsApp pero no envía el mensaje, el pedido igual queda registrado como "nuevo" (se guarda al pulsar el botón). Ruth debe confirmar siempre con el cliente.
 
+## Editar productos y datos desde el panel
+En `admin.html`, debajo de los pedidos, Ruth puede agregar/borrar productos, cambiar precio, descripción y disponibilidad, subir fotos nuevas (se reducen automáticamente) y editar WhatsApp, horarios, mapa, zona de entrega y pago. La tienda lee esos datos de Supabase; si no está configurado, usa `config.js`.
+
 ## Lo que aún NO incluye
-- Editar productos, fotos, precios y datos de contacto desde el panel: por ahora se editan en `config.js` y `assets/img/`.
 - No probé nada en un navegador real ni contra un proyecto de Supabase real.
