@@ -1,0 +1,14 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Pedidos | Ruth's Flowers</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="styles.css">
+<style>body{padding:0}main{max-width:640px;margin:auto;padding:20px}.ped{background:#fff;border-radius:18px;box-shadow:var(--sombra);padding:16px;margin:14px 0}.ped pre{white-space:pre-wrap;font:inherit;margin:8px 0}.nuevo{border-left:6px solid var(--rosa2)}.fila{display:flex;gap:8px;flex-wrap:wrap;align-items:center}</style></head>
+<body><main>
+<h1 class="logo" style="font-size:2.4rem">Pedidos</h1>
+<form id="login" novalidate style="display:grid;gap:10px"><label>Correo<input name="e" type="email" required autocomplete="username"></label><label>Contraseña<input name="p" type="password" required autocomplete="current-password"></label><button class="btn">Entrar</button><p id="lerr" class="err" role="alert"></p></form>
+<section id="panel" hidden>
+ <div class="fila"><button id="notif" class="btn">Activar notificaciones</button><button id="salir" class="btn ghost" style="color:var(--rosa2);border-color:var(--rosa2)">Salir</button></div>
+ <p class="nota" id="notifMsg">Para recibir avisos con el celular bloqueado: en iPhone, primero agrega esta página a la pantalla de inicio; en Android usa Chrome. Pueden retrasarse si el ahorro de batería está activo.</p>
+ <label>Mostrar<select id="filtro"><option value="">Todos</option><option>nuevo</option><option>pendiente</option><option>en preparación</option><option>listo</option><option>entregado</option><option>cancelado</option></select></label>
+ <div id="lista"></div>
+</section></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script><script src="admin.js"></script></body></html>
